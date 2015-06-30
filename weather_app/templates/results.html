@@ -1,0 +1,15 @@
+{% extends "search.html" %}
+
+{% block results %}
+
+{% if api_data['error'] %}
+
+	<p>There are no results found.</p>
+
+{% else %}
+	<h3>{{ api_data['location']['name'] }} </h3>
+	<p>{{ api_data['current_conditions']['temperature'] }}</p>
+
+{% endif %}
+	
+{% endblock %}
